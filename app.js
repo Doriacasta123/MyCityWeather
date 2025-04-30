@@ -7,12 +7,12 @@ document.getElementById("weather-form").addEventListener("submit", async functio
   
     try {
       const res = await fetch(url);
-      if (!res.ok) throw new Error("Ciudad no encontrada");
+      if (!res.ok) throw new Error("City not found");
       const data = await res.json();
   
       document.getElementById("city-name").textContent = data.name;
-      document.getElementById("temperature").textContent = `Temperatura: ${data.main.temp}°C`;
-      document.getElementById("description").textContent = `Condición: ${data.weather[0].description}`;
+      document.getElementById("temperature").textContent = `Temperature: ${data.main.temp}°C`;
+      document.getElementById("description").textContent = `Description: ${data.weather[0].description}`;
       document.getElementById("weather-result").classList.remove("hidden");
   
     } catch (error) {

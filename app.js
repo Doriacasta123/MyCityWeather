@@ -3,7 +3,7 @@ document.getElementById("weather-form").addEventListener("submit", async functio
   
     const city = document.getElementById("city-input").value.trim();
     const apiKey = "14e8e85bed8ac2a2ab667e6cf5b27e93"; 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lang=es&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lang=en&units=metric`;
   
     try {
       const res = await fetch(url);
